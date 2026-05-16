@@ -1,0 +1,25 @@
+/* ==========================================================================
+   VEMA BYGG - DET ISOLERADE FOOTER-BLADET 🚀
+   ========================================================================== */
+
+/* Vi kräver att elementet måste ligga inuti en footer för att trigga */
+footer span,
+footer [class*="_menuItemLink_"],
+.site-footer span,
+.site-footer [class*="_menuItemLink_"],
+[class*="footer"] span,
+[class*="footer"] [class*="_menuItemLink_"] {
+  color: {{ theme.group_foundation.group_colors.group_accent_colors.color_1.color }} !important;
+  --menu-item-color: {{ theme.group_foundation.group_colors.group_accent_colors.color_1.color }} !important;
+  opacity: 1 !important;
+}
+
+/* Hover-effekt enbart i footern */
+footer span:hover,
+footer [class*="_menuItemLink_"]:hover,
+.site-footer span:hover,
+.site-footer [class*="_menuItemLink_"]:hover {
+  color: #e04a3a !important;
+  --menu-item-color: #e04a3a !important;
+  cursor: pointer !important;
+}

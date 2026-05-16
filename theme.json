@@ -1,5 +1,8 @@
 {
   "name": "VEMA BYGG - Child",
   "label": "VEMA BYGG - Child",
-  "extends": "@hubspot/elevate"
+  "extends": "@hubspot/elevate",
+  "additional_stylesheets": [
+    "css/custom.css"
+  ]
 }
