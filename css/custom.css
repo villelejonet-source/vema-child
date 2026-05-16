@@ -1,0 +1,101 @@
+/* ==========================================================================
+   VEMA BYGG - COMPACT FORM STYLES - V1.0 🚀
+   ========================================================================== */
+
+/* Minska det enorma tomma avståndet mellan raderna */
+.hs-form .hs-form-field {
+  margin-bottom: 12px !important;
+}
+
+/* Gör fält-titlarna (E-post, Förnamn) mindre och tightare */
+.hs-form label {
+  margin-bottom: 3px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #333333 !important;
+}
+
+/* Krymp höjden på själva textrutorna dramatiskt */
+.hs-form input[type="text"],
+.hs-form input[type="email"],
+.hs-form input[type="tel"],
+.hs-form select,
+.hs-form textarea {
+  padding: 10px 14px !important;
+  height: auto !important;
+  font-size: 14px !important;
+  border-radius: 6px !important;
+  border: 1px solid #cbd5e1 !important;
+  background-color: #f8fafc !important;
+}
+
+/* Sätt fält på samma rad (t.ex. Förnamn & Efternamn) om de dras bredvid varandra */
+.hs-form .hs-form-row {
+  display: flex !important;
+  gap: 15px !important;
+  margin-bottom: 0 !important;
+}
+
+.hs-form .hs-form-row .hs-form-field {
+  flex: 1 !important;
+}
+
+/* Gör formuläret helt responsivt på mobilen */
+@media (max-width: 576px) {
+  .hs-form .hs-form-row {
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   VEMA BYGG - GDPR OCH SKICKA-KNAPP STYLING 🚀
+   ========================================================================== */
+
+/* Gör GDPR/Samtyckestexten mindre, vänsterställd och snygg */
+.hs-form .hs-legal-consent-body,
+.hs-form .hs-form-booleancheckbox-display,
+.hs-form .hs-richtext {
+  text-align: left !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  color: #475569 !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Fixa till kryssrutan och dess text så de ligger snyggt */
+.hs-form .hs-form-booleancheckbox-display {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+}
+
+.hs-form input[type="checkbox"] {
+  margin-top: 4px !important;
+}
+
+/* Krymp skicka-knappen och lägg den till vänster */
+.hs-form .hs-submit {
+  text-align: left !important;
+  margin-top: 15px !important;
+}
+
+.hs-form input[type="submit"],
+.hs-form .hs-button {
+  width: auto !important;
+  padding: 10px 30px !important;
+  font-size: 15px !important;
+  font-weight: bold !important;
+  border-radius: 6px !important;
+  background-color: #e04a3a !important; /* VEMA-röd */
+  color: #ffffff !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.hs-form input[type="submit"]:hover,
+.hs-form .hs-button:hover {
+  background-color: #c73e30 !important;
+}

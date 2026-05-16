@@ -1,0 +1,107 @@
+{% block header %}
+<header class="vema-header">
+  <div class="vema-header-container">
+    
+    <div class="vema-logo-area">
+      <a href="/">
+        {% if theme.site_settings.logo.src %}
+          <img src="{{ theme.site_settings.logo.src }}" alt="VEMA BYGG" class="vema-logo-img">
+        {% else %}
+          <span class="vema-logo-text">VEMA BYGG</span>
+        {% endif %}
+      </a>
+    </div>
+
+    <nav class="vema-nav">
+      {% menu "vema_main_menu" id=theme.site_settings.menu, flyout_toggle=true, max_levels=2 %}
+    </nav>
+
+    <div class="vema-cta-area">
+      <a href="/kontakta-oss" class="vema-btn-header">Få offert</a>
+    </div>
+
+  </div>
+</header>
+
+<link rel="stylesheet" href="{{ get_asset_url('/vema-child/css/custom.css') }}">
+
+<style>
+.vema-header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 15px 0;
+  font-family: sans-serif;
+}
+
+.vema-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vema-logo-img {
+  max-height: 50px;
+  display: block;
+}
+
+.vema-logo-text {
+  font-weight: bold;
+  font-size: 24px;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.vema-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+.vema-nav ul li a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.vema-nav ul li a:hover {
+  color: #e04a3a;
+}
+
+.vema-btn-header {
+  background-color: #e04a3a;
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 15px;
+  transition: background 0.2s ease, transform 0.1s ease;
+  display: inline-block;
+}
+
+.vema-btn-header:hover {
+  background-color: #c73e30;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .vema-header-container {
+    flex-wrap: wrap;
+  }
+  .vema-nav {
+    display: none;
+  }
+}
+</style>
+{% endblock header %}

@@ -1,0 +1,5 @@
+{
+  "name": "VEMA BYGG - Child",
+  "label": "VEMA BYGG - Child",
+  "extends": "@hubspot/elevate"
+}
